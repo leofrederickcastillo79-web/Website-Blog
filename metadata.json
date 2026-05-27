@@ -1,0 +1,6 @@
+{
+  "name": "Rizal Blog",
+  "description": "Professional educational blog exploring the formation of José Rizal's character and heroism.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
