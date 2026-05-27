@@ -1,3 +1,8 @@
+import introImage from './assets/images/regenerated_image_1779892463037.png';
+import biologicalImage from './assets/images/regenerated_image_1779893027722.jpg';
+import environmentalImage from './assets/images/regenerated_image_1779893028886.png';
+import lifeImage from './assets/images/regenerated_image_1779893031386.png';
+
 export type Category =
   | "Overview"
   | "Biological Factors"
@@ -49,7 +54,7 @@ export const sectionsData: SectionData[] = [
           "Rizal’s life is historically important because it demonstrates how personal ability becomes meaningful when directed toward the welfare of others. His education, writings, medical service, civic organizing, and final sacrifice reveal that his heroism was not formed in a single moment. It developed through the combined influence of family, schooling, experiences of injustice, international exposure, moral choices, and the challenges he endured.",
         ],
         imagePlaceholder: {
-          url: "https://images.unsplash.com/photo-1544830250-62422fa71ff9?q=80&w=1200&auto=format&fit=crop",
+          url: introImage,
           alt: "Old academic books representing Rizal's intellect",
           caption:
             "Rizal's extensive writing and intellectual pursuits formed the core of his heroism.",
@@ -126,7 +131,7 @@ export const sectionsData: SectionData[] = [
           "This aspect of Rizal’s life is important because it demonstrates the connection between personal experience and professional purpose. His medical path was connected to compassion and responsibility within his family. Later, during his exile in Dapitan, his medical skill also became a means of serving the wider community (Intramuros Administration, n.d.; Ravin, 2001; Sutherland, 2025).",
         ],
         imagePlaceholder: {
-          url: "https://images.unsplash.com/photo-1506126613408-eca07ce68773?q=80&w=1200&auto=format&fit=crop",
+          url: biologicalImage,
           alt: "Old academic medical environment",
           caption:
             "His mother's failing eyesight profoundly guided his decision to specialize in ophthalmology.",
@@ -187,7 +192,7 @@ export const sectionsData: SectionData[] = [
           "<strong>1882–1884: Studies in Madrid:</strong> In 1882, Rizal travelled to Madrid to continue his studies. He later obtained a Licentiate in Medicine from the Universidad Central de Madrid. His European education exposed him to wider intellectual, scientific, and political environments, providing a broader perspective from which to evaluate the conditions of the Philippines (Sutherland, 2025).",
         ],
         imagePlaceholder: {
-          url: "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?q=80&w=1200&auto=format&fit=crop",
+          url: environmentalImage,
           alt: "Ateneo or old university architecture",
           caption:
             "His formal education served as the foundation for his critical analysis of Philippine society.",
@@ -317,7 +322,7 @@ export const sectionsData: SectionData[] = [
           "<strong>Significance:</strong> His second novel showed the development of Rizal’s political thinking. It connected the memory of earlier injustice with the continuing failure of colonial authorities to address Filipino grievances.",
         ],
         imagePlaceholder: {
-          url: "https://images.unsplash.com/photo-1518081461904-b71422ab6222?q=80&w=1200&auto=format&fit=crop",
+          url: lifeImage,
           alt: "European classic architecture",
           caption:
             "His time in Europe deeply broadened his political perspectives and understanding of systemic inequality.",
