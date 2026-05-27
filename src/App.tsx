@@ -1,15 +1,14 @@
-import { useState, useEffect } from 'react';
-import { AnimatePresence, motion, useScroll, useSpring } from 'motion/react';
-import { Moon, Sun, ArrowUp } from 'lucide-react';
-import { filters, sectionsData, Category } from './data';
-import { Hero } from './components/Hero';
-import { FilterBar } from './components/FilterBar';
-import { BlogSection } from './components/BlogSection';
-import { InteractiveTimeline } from './components/Timeline';
-import { ReferencesSection } from './components/References';
+import { useState, useEffect } from "react";
+import { AnimatePresence, motion, useScroll, useSpring } from "motion/react";
+import { Moon, Sun, ArrowUp } from "lucide-react";
+import { filters, sectionsData, Category } from "./data";
+import { Hero } from "./components/Hero";
+import { FilterBar } from "./components/FilterBar";
+import { BlogSection } from "./components/BlogSection";
+import { ReferencesSection } from "./components/References";
 
 export default function App() {
-  const [activeFilter, setActiveFilter] = useState<Category | 'All'>('All');
+  const [activeFilter, setActiveFilter] = useState<Category | "All">("All");
   const [isDark, setIsDark] = useState(false);
   const [showBackToTop, setShowBackToTop] = useState(false);
 
@@ -17,21 +16,24 @@ export default function App() {
   const scaleX = useSpring(scrollYProgress, {
     stiffness: 100,
     damping: 30,
-    restDelta: 0.001
+    restDelta: 0.001,
   });
 
   useEffect(() => {
     // Check system preference
-    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+    if (
+      window.matchMedia &&
+      window.matchMedia("(prefers-color-scheme: dark)").matches
+    ) {
       setIsDark(true);
     }
   }, []);
 
   useEffect(() => {
     if (isDark) {
-      document.documentElement.classList.add('dark');
+      document.documentElement.classList.add("dark");
     } else {
-      document.documentElement.classList.remove('dark');
+      document.documentElement.classList.remove("dark");
     }
   }, [isDark]);
 
@@ -39,17 +41,18 @@ export default function App() {
     const handleScroll = () => {
       setShowBackToTop(window.scrollY > 800);
     };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
-  const filteredSections = activeFilter === 'All' 
-    ? sectionsData 
-    : sectionsData.filter(section => section.category === activeFilter);
+  const filteredSections =
+    activeFilter === "All"
+      ? sectionsData
+      : sectionsData.filter((section) => section.category === activeFilter);
 
   return (
     <div className="min-h-screen">
@@ -71,15 +74,15 @@ export default function App() {
       {/* Main Content */}
       <main>
         <Hero />
-        
-        <FilterBar 
-          activeFilter={activeFilter} 
-          onFilterChange={setActiveFilter} 
+
+        <FilterBar
+          activeFilter={activeFilter}
+          onFilterChange={setActiveFilter}
         />
 
         <div className="max-w-4xl mx-auto px-6 py-16">
           <AnimatePresence mode="popLayout">
-            {filteredSections.map(section => (
+            {filteredSections.map((section) => (
               <motion.div
                 key={section.id}
                 initial={{ opacity: 0, scale: 0.95, y: 20 }}
@@ -90,19 +93,6 @@ export default function App() {
                 <BlogSection data={section} />
               </motion.div>
             ))}
-          </AnimatePresence>
-
-          {/* Timeline - Only show in 'All' or if a 'Analysis' / 'Life Experiences' filter makes sense, but the prompt implies it's a major section. I'll show it if 'All' or 'Life Experiences' filter is active */}
-          <AnimatePresence>
-            {(activeFilter === 'All' || activeFilter === 'Life Experiences') && (
-               <motion.div
-                 initial={{ opacity: 0, height: 0 }}
-                 animate={{ opacity: 1, height: 'auto' }}
-                 exit={{ opacity: 0, height: 0 }}
-               >
-                 <InteractiveTimeline />
-               </motion.div>
-            )}
           </AnimatePresence>
         </div>
 
