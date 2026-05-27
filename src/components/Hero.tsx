@@ -34,7 +34,7 @@ export function Hero() {
           <div className="flex items-center gap-4 mb-8">
             <div className="w-12 h-[1px] bg-[#B8860B]/60"></div>
             <span className="px-5 py-2 rounded-full bg-[#2C1B10]/90 dark:bg-black/60 backdrop-blur-md border border-[#B8860B]/50 text-[#F4ECD8] font-bold text-xs tracking-[0.25em] uppercase shadow-[0_0_20px_rgba(184,134,11,0.2)]">
-              Historical Character Analysis
+              HISTORICAL ANALYSIS
             </span>
             <div className="w-12 h-[1px] bg-[#B8860B]/60"></div>
           </div>

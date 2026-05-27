@@ -56,8 +56,7 @@ export const sectionsData: SectionData[] = [
         imagePlaceholder: {
           url: introImage,
           alt: "Old academic books representing Rizal's intellect",
-          caption:
-            "Rizal's extensive writing and intellectual pursuits formed the core of his heroism.",
+          caption: "Photo courtesy of JoseRizal.com / Lean Liwanag",
         },
       },
       {
@@ -133,8 +132,7 @@ export const sectionsData: SectionData[] = [
         imagePlaceholder: {
           url: biologicalImage,
           alt: "Old academic medical environment",
-          caption:
-            "His mother's failing eyesight profoundly guided his decision to specialize in ophthalmology.",
+          caption: "Painting of Dr. Jose Rizal by Romeo Enriquez (1960) at the Rizal Shrine, Fort Santiago.",
         },
       },
       {
@@ -194,8 +192,7 @@ export const sectionsData: SectionData[] = [
         imagePlaceholder: {
           url: environmentalImage,
           alt: "Ateneo or old university architecture",
-          caption:
-            "His formal education served as the foundation for his critical analysis of Philippine society.",
+          caption: "Photo by JoseRizal.com",
         },
       },
       {
@@ -324,8 +321,7 @@ export const sectionsData: SectionData[] = [
         imagePlaceholder: {
           url: lifeImage,
           alt: "European classic architecture",
-          caption:
-            "His time in Europe deeply broadened his political perspectives and understanding of systemic inequality.",
+          caption: "Photo courtesy of JoseRizal.com / Aida Bautista",
         },
       },
       {
