@@ -55,40 +55,48 @@ export default function App() {
       : sectionsData.filter((section) => section.category === activeFilter);
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen relative font-sans">
+      <div className="fixed inset-0 bg-noise opacity-[0.03] dark:opacity-[0.05] pointer-events-none z-[100] mix-blend-overlay"></div>
+      
+      {/* Background Decorative Elements */}
+      <div className="fixed top-[-20%] left-[-10%] w-[50%] h-[50%] bg-[#D4AF37]/5 dark:bg-[#D4AF37]/5 rounded-full blur-[120px] pointer-events-none z-0"></div>
+      <div className="fixed bottom-[10%] right-[-5%] w-[40%] h-[40%] bg-[#1A362D]/5 dark:bg-[#A3B8AD]/5 rounded-full blur-[100px] pointer-events-none z-0"></div>
+
       {/* Scroll Progress Bar */}
       <motion.div
-        className="fixed top-0 left-0 right-0 h-1.5 bg-[#D4AF37] transform origin-left z-50 rounded-r-full"
+        className="fixed top-0 left-0 right-0 h-1 md:h-1.5 bg-gradient-to-r from-[#1A362D] to-[#D4AF37] transform origin-left z-[100]"
         style={{ scaleX }}
       />
 
       {/* Theme Toggle Button */}
       <button
         onClick={() => setIsDark(!isDark)}
-        className="fixed top-6 right-6 z-50 p-3 rounded-full bg-white/80 dark:bg-stone-800/80 backdrop-blur-md shadow-md text-stone-800 dark:text-stone-200 hover:scale-105 transition-transform"
+        className="fixed top-6 right-6 z-[60] p-3 rounded-full bg-white/70 dark:bg-[#1A1A1A]/70 backdrop-blur-xl shadow-lg border border-white dark:border-stone-800 text-stone-800 dark:text-stone-200 hover:scale-105 transition-transform"
         aria-label="Toggle dark mode"
       >
         {isDark ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
       </button>
 
       {/* Main Content */}
-      <main>
+      <main className="relative z-10">
         <Hero />
 
-        <FilterBar
-          activeFilter={activeFilter}
-          onFilterChange={setActiveFilter}
-        />
+        <div className="relative pt-6">
+          <FilterBar
+            activeFilter={activeFilter}
+            onFilterChange={setActiveFilter}
+          />
+        </div>
 
-        <div className="max-w-4xl mx-auto px-6 py-16">
+        <div className="max-w-5xl mx-auto px-6 py-12 md:py-20 relative z-10">
           <AnimatePresence mode="popLayout">
             {filteredSections.map((section) => (
               <motion.div
                 key={section.id}
-                initial={{ opacity: 0, scale: 0.95, y: 20 }}
+                initial={{ opacity: 0, scale: 0.98, y: 30 }}
                 animate={{ opacity: 1, scale: 1, y: 0 }}
-                exit={{ opacity: 0, scale: 0.95, y: -20, filter: "blur(4px)" }}
-                transition={{ duration: 0.4 }}
+                exit={{ opacity: 0, scale: 0.98, y: -20, filter: "blur(4px)" }}
+                transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
               >
                 <BlogSection data={section} />
               </motion.div>
@@ -103,11 +111,11 @@ export default function App() {
       <AnimatePresence>
         {showBackToTop && (
           <motion.button
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20, scale: 0.8 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            exit={{ opacity: 0, y: 20, scale: 0.8 }}
             onClick={scrollToTop}
-            className="fixed bottom-8 right-8 z-50 p-4 rounded-full bg-[#1A362D] text-white shadow-xl hover:bg-[#11231d] hover:-translate-y-1 transition-all duration-300"
+            className="fixed bottom-8 right-8 z-[60] p-4 rounded-full bg-[#1A362D] dark:bg-[#D4AF37] text-white dark:text-stone-900 shadow-2xl hover:scale-110 transition-all duration-300"
             aria-label="Back to top"
           >
             <ArrowUp className="w-6 h-6" />
