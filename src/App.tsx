@@ -5,10 +5,11 @@ import { filters, sectionsData, Category } from "./data";
 import { Hero } from "./components/Hero";
 import { FilterBar } from "./components/FilterBar";
 import { BlogSection } from "./components/BlogSection";
+import { AboutAuthors } from "./components/AboutAuthors";
 import { ReferencesSection } from "./components/References";
 
 export default function App() {
-  const [activeFilter, setActiveFilter] = useState<Category | "All">("All");
+  const [activeFilter, setActiveFilter] = useState<Category | "All" | "About the Authors">("All");
   const [isDark, setIsDark] = useState(false);
   const [showBackToTop, setShowBackToTop] = useState(false);
 
@@ -90,7 +91,7 @@ export default function App() {
 
         <div className="max-w-5xl mx-auto px-6 py-12 md:py-20 relative z-10">
           <AnimatePresence mode="popLayout">
-            {filteredSections.map((section) => (
+            {activeFilter !== "About the Authors" && filteredSections.map((section) => (
               <motion.div
                 key={section.id}
                 initial={{ opacity: 0, scale: 0.98, y: 30 }}
@@ -101,6 +102,16 @@ export default function App() {
                 <BlogSection data={section} />
               </motion.div>
             ))}
+            {activeFilter === "About the Authors" && (
+              <motion.div
+                initial={{ opacity: 0, scale: 0.98, y: 30 }}
+                animate={{ opacity: 1, scale: 1, y: 0 }}
+                exit={{ opacity: 0, scale: 0.98, y: -20, filter: "blur(4px)" }}
+                transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
+              >
+                <AboutAuthors />
+              </motion.div>
+            )}
           </AnimatePresence>
         </div>
 

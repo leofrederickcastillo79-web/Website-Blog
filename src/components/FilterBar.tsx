@@ -2,12 +2,12 @@ import { Category, filters } from '../data';
 import { motion } from 'motion/react';
 
 interface FilterBarProps {
-  activeFilter: Category | 'All';
-  onFilterChange: (category: Category | 'All') => void;
+  activeFilter: Category | 'All' | 'About the Authors';
+  onFilterChange: (category: Category | 'All' | 'About the Authors') => void;
 }
 
 export function FilterBar({ activeFilter, onFilterChange }: FilterBarProps) {
-  const allFilters = ['All', ...filters];
+  const allFilters = ['All', ...filters, 'About the Authors'];
 
   return (
     <div className="sticky top-6 z-40 px-4 flex justify-center pointer-events-none pb-4">
@@ -17,7 +17,7 @@ export function FilterBar({ activeFilter, onFilterChange }: FilterBarProps) {
           return (
             <button
               key={filter}
-              onClick={() => onFilterChange(filter as Category | 'All')}
+              onClick={() => onFilterChange(filter as Category | 'All' | 'About the Authors')}
               className={`relative px-4 py-2 md:px-5 md:py-2.5 rounded-xl text-xs md:text-sm font-medium transition-all duration-300
                 ${
                   isActive
