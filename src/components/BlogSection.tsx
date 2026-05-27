@@ -16,7 +16,7 @@ export function BlogSection({ data }: BlogSectionProps) {
       className="mb-20 md:mb-32 scroll-mt-32 relative z-10"
       id={data.id}
     >
-      <div className="bg-white/80 dark:bg-[#1A1A1A]/80 backdrop-blur-xl border border-stone-200/60 dark:border-stone-800/80 rounded-[2.5rem] p-8 md:p-14 shadow-[0_20px_60px_-15px_rgba(0,0,0,0.05)] dark:shadow-[0_20px_60px_-15px_rgba(0,0,0,0.3)] transition-shadow duration-500 relative overflow-hidden">
+      <div className="bg-white/80 dark:bg-[#1A1A1A]/80 backdrop-blur-xl border border-stone-200/60 dark:border-stone-800/80 rounded-[2rem] sm:rounded-[2.5rem] p-6 sm:p-8 md:p-14 shadow-[0_20px_60px_-15px_rgba(0,0,0,0.05)] dark:shadow-[0_20px_60px_-15px_rgba(0,0,0,0.3)] transition-shadow duration-500 relative overflow-hidden">
         {/* Subtle decorative background gradient within card */}
         <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-bl from-[#B8860B]/5 to-transparent rounded-full blur-[80px] pointer-events-none"></div>
         
@@ -95,10 +95,10 @@ export function BlogSection({ data }: BlogSectionProps) {
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true, margin: "-50px" }}
                     transition={{ duration: 0.5, delay: i * 0.1 }}
-                    className="grid grid-cols-[100px_40px_1fr] md:grid-cols-[140px_48px_1fr] gap-0 relative group"
+                    className="grid grid-cols-[70px_32px_1fr] sm:grid-cols-[100px_40px_1fr] md:grid-cols-[140px_48px_1fr] gap-0 relative group"
                   >
-                    <div className="text-right pr-4 md:pr-6 pt-1 md:pt-1.5 transition-transform duration-300 group-hover:-translate-x-1">
-                      <span className="inline-block text-sm md:text-base font-bold font-serif text-[#2C1B10] dark:text-[#B8860B] leading-tight text-balance bg-[#2C1B10]/5 dark:bg-[#B8860B]/10 px-3 py-1.5 rounded-lg">
+                    <div className="text-right pr-3 md:pr-6 pt-1 md:pt-1.5 transition-transform duration-300 group-hover:-translate-x-1">
+                      <span className="inline-block text-xs sm:text-sm md:text-base font-bold font-serif text-[#2C1B10] dark:text-[#B8860B] leading-tight text-balance bg-[#2C1B10]/5 dark:bg-[#B8860B]/10 px-2 md:px-3 py-1.5 rounded-lg">
                         {item.marker}
                       </span>
                     </div>
@@ -111,8 +111,8 @@ export function BlogSection({ data }: BlogSectionProps) {
                       )}
                     </div>
 
-                    <div className="pb-10 pl-4 md:pl-6 transition-transform duration-300 group-hover:translate-x-1">
-                      <div className="bg-stone-50 dark:bg-[#222] p-6 md:p-8 rounded-[1.5rem] border border-stone-200 dark:border-stone-800 shadow-sm group-hover:shadow-md group-hover:border-[#B8860B]/30 transition-all duration-300">
+                    <div className="pb-10 pl-2 sm:pl-4 md:pl-6 transition-transform duration-300 group-hover:translate-x-1">
+                      <div className="bg-stone-50 dark:bg-[#222] p-5 sm:p-6 md:p-8 rounded-[1.5rem] border border-stone-200 dark:border-stone-800 shadow-sm group-hover:shadow-md group-hover:border-[#B8860B]/30 transition-all duration-300">
                         <h4 className="text-xl md:text-2xl font-bold font-serif text-stone-900 dark:text-stone-100 mb-3">
                           {item.title}
                         </h4>

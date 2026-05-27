@@ -21,7 +21,7 @@ const authors = [
 
 export function AboutAuthors() {
   return (
-    <section id="about-us" className="pt-10 pb-20 px-6 max-w-5xl mx-auto relative z-10">
+    <section id="about-us" className="pt-10 pb-20 px-4 sm:px-6 max-w-5xl mx-auto relative z-10 w-full">
       <div className="mb-12">
         <div className="flex items-center gap-4 mb-6">
           <div className="h-[1px] flex-grow bg-gradient-to-r from-transparent to-stone-200 dark:to-stone-800"></div>
@@ -38,7 +38,7 @@ export function AboutAuthors() {
             key={author.name} 
             className={`flex flex-col md:flex-row gap-8 md:gap-12 items-start ${index % 2 !== 0 ? 'md:flex-row-reverse' : ''}`}
           >
-            <div className="w-full md:w-1/3 shrink-0">
+            <div className="w-full max-w-sm mx-auto md:max-w-none md:w-1/3 shrink-0">
               <div className="relative aspect-[4/5] overflow-hidden rounded-[2rem] border border-stone-200 dark:border-stone-800 shadow-xl group">
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 <img 

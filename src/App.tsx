@@ -56,7 +56,7 @@ export default function App() {
       : sectionsData.filter((section) => section.category === activeFilter);
 
   return (
-    <div className="min-h-screen relative font-sans">
+    <div className="min-h-screen relative font-sans overflow-x-hidden w-full">
       <div className="fixed inset-0 bg-noise opacity-[0.03] dark:opacity-[0.05] pointer-events-none z-[100] mix-blend-overlay"></div>
       
       {/* Background Decorative Elements */}
@@ -89,7 +89,7 @@ export default function App() {
           />
         </div>
 
-        <div className="max-w-5xl mx-auto px-6 py-12 md:py-20 relative z-10">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 py-12 md:py-20 relative z-10 w-full">
           <AnimatePresence mode="popLayout">
             {activeFilter !== "About the Authors" && filteredSections.map((section) => (
               <motion.div
