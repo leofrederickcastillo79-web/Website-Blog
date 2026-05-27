@@ -32,20 +32,20 @@ export function InteractiveTimeline() {
             >
               {/* Vertical line connecting nodes */}
               {idx !== timelineEvents.length - 1 && (
-                <div className="absolute left-[39px] top-16 bottom-[-24px] w-0.5 bg-[#4A645A]/50 z-0 hidden md:block"></div>
+                <div className="absolute left-[47px] top-20 bottom-[-24px] w-0.5 bg-[#4A645A]/50 z-0 hidden md:block"></div>
               )}
 
               <button 
                 onClick={() => toggleExpand(idx)}
                 className="relative z-10 w-full text-left bg-white/5 hover:bg-white/10 border border-white/10 rounded-2xl p-6 transition-all duration-300 group flex flex-col md:flex-row gap-6 items-start md:items-center"
               >
-                <div className="flex-shrink-0 flex items-center justify-center w-20 h-20 rounded-full bg-[#1A362D] border-4 border-[#D4AF37] text-white font-serif font-bold text-xl shadow-[0_0_20px_rgba(212,175,55,0.2)] group-hover:scale-105 transition-transform">
+                <div className="flex-shrink-0 flex items-center justify-center w-24 h-24 rounded-full bg-[#1A362D] border-4 border-[#D4AF37] text-white font-serif font-bold text-sm sm:text-base text-center leading-tight p-2 shadow-[0_0_20px_rgba(212,175,55,0.2)] group-hover:scale-105 transition-transform text-balance break-words">
                   {event.year}
                 </div>
                 
                 <div className="flex-grow flex items-center justify-between w-full">
                   <h3 className="text-2xl font-bold font-serif text-white">{event.title}</h3>
-                  <ChevronDown className={`w-6 h-6 text-[#A3B8AD] transition-transform duration-300 ${expandedIndex === idx ? 'rotate-180' : ''}`} />
+                  <ChevronDown className={`w-6 h-6 text-[#A3B8AD] transition-transform duration-300 flex-shrink-0 ${expandedIndex === idx ? 'rotate-180' : ''}`} />
                 </div>
               </button>
 
@@ -56,7 +56,7 @@ export function InteractiveTimeline() {
                     animate={{ opacity: 1, height: 'auto' }}
                     exit={{ opacity: 0, height: 0 }}
                     transition={{ duration: 0.3 }}
-                    className="overflow-hidden md:pl-[120px]"
+                    className="overflow-hidden md:pl-[144px]"
                   >
                     <div className="p-6 mt-2 bg-white/5 border border-white/5 rounded-2xl text-[#A3B8AD] leading-relaxed text-lg">
                       {event.description}
