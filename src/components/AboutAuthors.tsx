@@ -1,4 +1,5 @@
 import React from 'react';
+import ashleyImage from '../assets/images/regenerated_image_1779899849028.jpg';
 
 const authors = [
   {
@@ -6,7 +7,7 @@ const authors = [
     role: "1st Year BSCE student",
     institution: "Mapúa Malayan Colleges Mindanao",
     bio: "Ashley Jane N. delos Reyes is a 1st Year BSCE student at Mapúa Malayan Colleges Mindanao. She is a curious and goal-driven student who is currently taking the Life and Works of José Rizal (SS038) course under section A241, where she is gradually developing a deeper appreciation for history, nationalism, and personal reflection. She has co-authored the \"Intellect, Conscience, and Nation: The Formation of Jose Rizal's Character and Heroism\" blog. Alongside her academic journey, she is interested in practical self-improvement topics such as personal finance, productivity, and student opportunities, often taking a step-by-step approach when learning new things. She has a strong love for reading, which helps her gain new perspectives and continuously expand her understanding of both academic and real-world topics. She is also actively involved in volunteerism, reflecting her desire to contribute positively to others and her community. In her free time, she enjoys exploring online content that inspires learning, motivation, and creativity, while striving to apply both academic lessons and real-life experiences in meaningful ways.",
-    image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=600&auto=format&fit=crop"
+    image: ashleyImage
   },
   {
     name: "Leo Frederick B. Castillo",
