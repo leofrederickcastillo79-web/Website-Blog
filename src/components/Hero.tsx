@@ -39,10 +39,11 @@ export function Hero() {
             <div className="w-12 h-[1px] bg-[#B8860B]/60"></div>
           </div>
           
-          <h1 className="text-5xl md:text-7xl lg:text-[7rem] font-serif font-bold text-white mb-8 leading-[1.05] tracking-tight text-balance relative">
-            <span className="block italic font-light text-[#B8860B] text-4xl md:text-5xl lg:text-6xl mb-2 lg:mb-[-10px] opacity-90 transform -rotate-2">The Formation of</span>
-            Intellect, Conscience, <br className="hidden md:block"/>
-            <span className="italic text-stone-300 font-light">&amp;</span> Nation
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-white mb-8 leading-[1.1] tracking-tight text-balance relative">
+            Intellect, Conscience, and Nation:
+            <span className="block mt-4 italic font-light text-[#B8860B] text-3xl md:text-4xl lg:text-5xl opacity-90">
+              The Formation of Jose Rizal's Character and Heroism
+            </span>
           </h1>
           
           <p className="text-lg md:text-2xl text-stone-200/90 max-w-2xl mx-auto leading-relaxed border-t border-stone-100/10 pt-8 mt-4 font-light">
