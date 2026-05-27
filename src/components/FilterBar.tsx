@@ -21,7 +21,7 @@ export function FilterBar({ activeFilter, onFilterChange }: FilterBarProps) {
               className={`relative px-4 py-2 md:px-5 md:py-2.5 rounded-xl text-xs md:text-sm font-medium transition-all duration-300
                 ${
                   isActive
-                    ? 'text-white'
+                    ? 'text-[#F4ECD8]'
                     : 'text-stone-600 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-200 hover:bg-black/5 dark:hover:bg-white/5'
                 }
               `}
@@ -29,7 +29,7 @@ export function FilterBar({ activeFilter, onFilterChange }: FilterBarProps) {
               {isActive && (
                 <motion.div
                   layoutId="active-filter-pill"
-                  className="absolute inset-0 bg-gradient-to-r from-[#1A362D] to-[#2C4A40] dark:from-[#3a5248] dark:to-[#4A645A] shadow-[0_2px_10px_rgba(26,54,45,0.3)] rounded-xl z-[-1]"
+                  className="absolute inset-0 bg-gradient-to-r from-[#2C1B10] to-[#4E342E] dark:from-[#4E342E] dark:to-[#6B4E31] shadow-[0_2px_10px_rgba(44,27,16,0.3)] rounded-xl z-[-1]"
                   transition={{ type: 'spring', stiffness: 450, damping: 30 }}
                 />
               )}

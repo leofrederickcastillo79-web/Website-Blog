@@ -59,12 +59,12 @@ export default function App() {
       <div className="fixed inset-0 bg-noise opacity-[0.03] dark:opacity-[0.05] pointer-events-none z-[100] mix-blend-overlay"></div>
       
       {/* Background Decorative Elements */}
-      <div className="fixed top-[-20%] left-[-10%] w-[50%] h-[50%] bg-[#D4AF37]/5 dark:bg-[#D4AF37]/5 rounded-full blur-[120px] pointer-events-none z-0"></div>
-      <div className="fixed bottom-[10%] right-[-5%] w-[40%] h-[40%] bg-[#1A362D]/5 dark:bg-[#A3B8AD]/5 rounded-full blur-[100px] pointer-events-none z-0"></div>
+      <div className="fixed top-[-20%] left-[-10%] w-[50%] h-[50%] bg-[#B8860B]/5 dark:bg-[#B8860B]/5 rounded-full blur-[120px] pointer-events-none z-0"></div>
+      <div className="fixed bottom-[10%] right-[-5%] w-[40%] h-[40%] bg-[#2C1B10]/5 dark:bg-[#D2B48C]/5 rounded-full blur-[100px] pointer-events-none z-0"></div>
 
       {/* Scroll Progress Bar */}
       <motion.div
-        className="fixed top-0 left-0 right-0 h-1 md:h-1.5 bg-gradient-to-r from-[#1A362D] to-[#D4AF37] transform origin-left z-[100]"
+        className="fixed top-0 left-0 right-0 h-1 md:h-1.5 bg-gradient-to-r from-[#2C1B10] to-[#B8860B] transform origin-left z-[100]"
         style={{ scaleX }}
       />
 
@@ -115,7 +115,7 @@ export default function App() {
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 20, scale: 0.8 }}
             onClick={scrollToTop}
-            className="fixed bottom-8 right-8 z-[60] p-4 rounded-full bg-[#1A362D] dark:bg-[#D4AF37] text-white dark:text-stone-900 shadow-2xl hover:scale-110 transition-all duration-300"
+            className="fixed bottom-8 right-8 z-[60] p-4 rounded-full bg-[#2C1B10] dark:bg-[#B8860B] text-[#F4ECD8] dark:text-[#1A1412] shadow-2xl hover:scale-110 transition-all duration-300"
             aria-label="Back to top"
           >
             <ArrowUp className="w-6 h-6" />

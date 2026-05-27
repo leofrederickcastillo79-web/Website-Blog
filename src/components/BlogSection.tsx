@@ -18,12 +18,12 @@ export function BlogSection({ data }: BlogSectionProps) {
     >
       <div className="bg-white/80 dark:bg-[#1A1A1A]/80 backdrop-blur-xl border border-stone-200/60 dark:border-stone-800/80 rounded-[2.5rem] p-8 md:p-14 shadow-[0_20px_60px_-15px_rgba(0,0,0,0.05)] dark:shadow-[0_20px_60px_-15px_rgba(0,0,0,0.3)] transition-shadow duration-500 relative overflow-hidden">
         {/* Subtle decorative background gradient within card */}
-        <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-bl from-[#D4AF37]/5 to-transparent rounded-full blur-[80px] pointer-events-none"></div>
+        <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-bl from-[#B8860B]/5 to-transparent rounded-full blur-[80px] pointer-events-none"></div>
         
         <div className="mb-12 relative z-10 flex flex-col md:flex-row md:items-end justify-between border-b border-stone-200 dark:border-stone-800 pb-8 gap-6">
           <div>
-            <span className="inline-flex items-center gap-2 px-4 py-1.5 bg-[#1A362D]/5 dark:bg-[#4A645A]/10 text-[#1A362D] dark:text-[#D4AF37] text-xs font-bold uppercase tracking-[0.15em] rounded-full mb-6">
-              <span className="w-1.5 h-1.5 rounded-full bg-[#D4AF37]"></span>
+            <span className="inline-flex items-center gap-2 px-4 py-1.5 bg-[#2C1B10]/5 dark:bg-[#5D4037]/10 text-[#2C1B10] dark:text-[#B8860B] text-xs font-bold uppercase tracking-[0.15em] rounded-full mb-6">
+              <span className="w-1.5 h-1.5 rounded-full bg-[#B8860B]"></span>
               {data.category}
             </span>
             <h2 className="text-4xl md:text-6xl font-serif font-bold text-stone-900 dark:text-stone-100 tracking-tight leading-tight">
@@ -36,7 +36,7 @@ export function BlogSection({ data }: BlogSectionProps) {
           <div key={idx} className="mt-14 first:mt-0 relative z-10">
             {sub.title && (
               <div className="flex items-center gap-4 mb-8">
-                <h3 className="text-2xl md:text-3xl font-serif font-medium text-[#1A362D] dark:text-[#A3B8AD]">
+                <h3 className="text-2xl md:text-3xl font-serif font-medium text-[#2C1B10] dark:text-[#D2B48C]">
                   {sub.title}
                 </h3>
                 <div className="h-[1px] flex-grow bg-gradient-to-r from-stone-200 dark:from-stone-800 to-transparent"></div>
@@ -76,9 +76,9 @@ export function BlogSection({ data }: BlogSectionProps) {
 
             {sub.quote && (
               <blockquote className="my-12 relative px-8 py-10 md:px-12 md:py-14 rounded-[2rem] overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-br from-[#1A362D]/5 to-[#D4AF37]/5 dark:from-[#D4AF37]/10 dark:to-transparent opacity-50 pointer-events-none"></div>
-                <div className="absolute left-0 top-0 bottom-0 w-1.5 bg-gradient-to-b from-[#1A362D] to-[#D4AF37]"></div>
-                <Quote className="absolute top-8 left-8 w-16 h-16 text-[#D4AF37] opacity-[0.15] -rotate-6" />
+                <div className="absolute inset-0 bg-gradient-to-br from-[#2C1B10]/5 to-[#B8860B]/5 dark:from-[#B8860B]/10 dark:to-transparent opacity-50 pointer-events-none"></div>
+                <div className="absolute left-0 top-0 bottom-0 w-1.5 bg-gradient-to-b from-[#2C1B10] to-[#B8860B]"></div>
+                <Quote className="absolute top-8 left-8 w-16 h-16 text-[#B8860B] opacity-[0.15] -rotate-6" />
                 
                 <p className="text-2xl md:text-3xl lg:text-4xl font-serif italic text-stone-800 dark:text-stone-200 relative z-10 leading-snug">
                   "{sub.quote}"
@@ -98,21 +98,21 @@ export function BlogSection({ data }: BlogSectionProps) {
                     className="grid grid-cols-[100px_40px_1fr] md:grid-cols-[140px_48px_1fr] gap-0 relative group"
                   >
                     <div className="text-right pr-4 md:pr-6 pt-1 md:pt-1.5 transition-transform duration-300 group-hover:-translate-x-1">
-                      <span className="inline-block text-sm md:text-base font-bold font-serif text-[#1A362D] dark:text-[#D4AF37] leading-tight text-balance bg-[#1A362D]/5 dark:bg-[#D4AF37]/10 px-3 py-1.5 rounded-lg">
+                      <span className="inline-block text-sm md:text-base font-bold font-serif text-[#2C1B10] dark:text-[#B8860B] leading-tight text-balance bg-[#2C1B10]/5 dark:bg-[#B8860B]/10 px-3 py-1.5 rounded-lg">
                         {item.marker}
                       </span>
                     </div>
 
                     <div className="relative flex justify-center">
-                      <div className="w-4 h-4 rounded-full border-[3px] border-white dark:border-[#1A1A1A] bg-[#D4AF37] dark:bg-[#D4AF37] mt-2 z-10 shadow-[0_0_0_4px_rgba(26,54,45,0.05)] dark:shadow-[0_0_0_4px_rgba(212,175,55,0.1)] shrink-0 transition-transform duration-500 group-hover:scale-150"></div>
+                      <div className="w-4 h-4 rounded-full border-[3px] border-white dark:border-[#1A1A1A] bg-[#B8860B] dark:bg-[#B8860B] mt-2 z-10 shadow-[0_0_0_4px_rgba(44,27,16,0.05)] dark:shadow-[0_0_0_4px_rgba(184,134,11,0.1)] shrink-0 transition-transform duration-500 group-hover:scale-150"></div>
                       
                       {i !== sub.listItems!.length - 1 && (
-                        <div className="absolute top-6 bottom-[-24px] w-[2px] bg-gradient-to-b from-[#1A362D]/20 to-[#1A362D]/5 dark:from-[#D4AF37]/20 dark:to-[#D4AF37]/5 z-0 group-hover:from-[#D4AF37]/50 transition-colors duration-500"></div>
+                        <div className="absolute top-6 bottom-[-24px] w-[2px] bg-gradient-to-b from-[#2C1B10]/20 to-[#2C1B10]/5 dark:from-[#B8860B]/20 dark:to-[#B8860B]/5 z-0 group-hover:from-[#B8860B]/50 transition-colors duration-500"></div>
                       )}
                     </div>
 
                     <div className="pb-10 pl-4 md:pl-6 transition-transform duration-300 group-hover:translate-x-1">
-                      <div className="bg-stone-50 dark:bg-[#222] p-6 md:p-8 rounded-[1.5rem] border border-stone-200 dark:border-stone-800 shadow-sm group-hover:shadow-md group-hover:border-[#D4AF37]/30 transition-all duration-300">
+                      <div className="bg-stone-50 dark:bg-[#222] p-6 md:p-8 rounded-[1.5rem] border border-stone-200 dark:border-stone-800 shadow-sm group-hover:shadow-md group-hover:border-[#B8860B]/30 transition-all duration-300">
                         <h4 className="text-xl md:text-2xl font-bold font-serif text-stone-900 dark:text-stone-100 mb-3">
                           {item.title}
                         </h4>
@@ -132,11 +132,11 @@ export function BlogSection({ data }: BlogSectionProps) {
                   <motion.div 
                     key={i} 
                     whileHover={{ y: -5 }}
-                    className="group bg-gradient-to-b from-stone-50 to-white dark:from-[#222] dark:to-[#1A1A1A] p-8 rounded-[2rem] border border-stone-200 dark:border-stone-800 shadow-sm hover:shadow-[0_20px_40px_-15px_rgba(212,175,55,0.15)] hover:border-[#D4AF37]/40 transition-all duration-500 relative overflow-hidden"
+                    className="group bg-gradient-to-b from-stone-50 to-white dark:from-[#222] dark:to-[#1A1A1A] p-8 rounded-[2rem] border border-stone-200 dark:border-stone-800 shadow-sm hover:shadow-[0_20px_40px_-15px_rgba(184,134,11,0.15)] hover:border-[#B8860B]/40 transition-all duration-500 relative overflow-hidden"
                   >
-                    <div className="absolute top-0 right-0 w-24 h-24 bg-[#D4AF37]/5 rounded-bl-[100px] transition-transform duration-500 group-hover:scale-150"></div>
+                    <div className="absolute top-0 right-0 w-24 h-24 bg-[#B8860B]/5 rounded-bl-[100px] transition-transform duration-500 group-hover:scale-150"></div>
                     
-                    <span className="text-[#D4AF37] text-xs font-bold uppercase tracking-[0.2em] mb-3 block">
+                    <span className="text-[#B8860B] text-xs font-bold uppercase tracking-[0.2em] mb-3 block">
                       {item.marker}
                     </span>
                     <h4 className="text-xl md:text-2xl font-bold font-serif text-stone-900 dark:text-stone-100 mb-4 pr-6">

@@ -18,7 +18,7 @@ export function Hero() {
             backgroundBlendMode: "luminosity"
           }}
         >
-          <div className="absolute inset-0 bg-gradient-to-b from-[#1A362D]/80 via-[#1A362D]/60 to-[#F9F6F0] dark:from-[#0a0a0a]/90 dark:via-[#121110]/80 dark:to-[#121110]"></div>
+          <div className="absolute inset-0 bg-gradient-to-b from-[#2C1B10]/80 via-[#2C1B10]/60 to-[#F4ECD8] dark:from-[#0F0A08]/90 dark:via-[#1A1412]/80 dark:to-[#1A1412]"></div>
         </div>
       </motion.div>
 
@@ -32,15 +32,15 @@ export function Hero() {
         >
           {/* Decorative Top Accent */}
           <div className="flex items-center gap-4 mb-8">
-            <div className="w-12 h-[1px] bg-[#D4AF37]/60"></div>
-            <span className="px-4 py-1.5 rounded-full bg-black/20 backdrop-blur-sm border border-[#D4AF37]/30 text-[#D4AF37] font-semibold text-xs tracking-[0.2em] uppercase shadow-[0_0_15px_rgba(212,175,55,0.15)]">
+            <div className="w-12 h-[1px] bg-[#B8860B]/60"></div>
+            <span className="px-5 py-2 rounded-full bg-[#2C1B10]/90 dark:bg-black/60 backdrop-blur-md border border-[#B8860B]/50 text-[#F4ECD8] font-bold text-xs tracking-[0.25em] uppercase shadow-[0_0_20px_rgba(184,134,11,0.2)]">
               Historical Character Analysis
             </span>
-            <div className="w-12 h-[1px] bg-[#D4AF37]/60"></div>
+            <div className="w-12 h-[1px] bg-[#B8860B]/60"></div>
           </div>
           
           <h1 className="text-5xl md:text-7xl lg:text-[7rem] font-serif font-bold text-white mb-8 leading-[1.05] tracking-tight text-balance relative">
-            <span className="block italic font-light text-[#D4AF37] text-4xl md:text-5xl lg:text-6xl mb-2 lg:mb-[-10px] opacity-90 transform -rotate-2">The Formation of</span>
+            <span className="block italic font-light text-[#B8860B] text-4xl md:text-5xl lg:text-6xl mb-2 lg:mb-[-10px] opacity-90 transform -rotate-2">The Formation of</span>
             Intellect, Conscience, <br className="hidden md:block"/>
             <span className="italic text-stone-300 font-light">&amp;</span> Nation
           </h1>
@@ -58,11 +58,11 @@ export function Hero() {
         transition={{ delay: 1.5, duration: 1 }}
         className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-3 z-20"
       >
-        <span className="text-[#D4AF37] uppercase tracking-widest text-[10px] font-bold">Scroll</span>
+        <span className="text-[#F4ECD8] dark:text-[#B8860B] uppercase tracking-[0.25em] text-[10px] font-bold opacity-80">Scroll</span>
         <motion.div 
           animate={{ y: [0, 8, 0] }}
           transition={{ repeat: Infinity, duration: 2, ease: "easeInOut" }}
-          className="w-[1px] h-12 bg-gradient-to-b from-[#D4AF37] to-transparent block"
+          className="w-[1px] h-12 bg-gradient-to-b from-[#B8860B] to-transparent block"
         ></motion.div>
       </motion.div>
     </section>
