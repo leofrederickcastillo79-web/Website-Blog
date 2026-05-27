@@ -70,31 +70,34 @@ export function BlogSection({ data }: BlogSectionProps) {
             )}
 
             {sub.listType === "timeline" && sub.listItems && (
-              <div className="mt-10 space-y-2 md:space-y-4">
+              <div className="mt-10 overflow-hidden">
                 {sub.listItems.map((item, i) => (
                   <div
                     key={i}
-                    className="flex gap-4 md:gap-8 relative pb-6 last:pb-0 pt-4"
+                    className="grid grid-cols-[100px_32px_1fr] md:grid-cols-[140px_48px_1fr] gap-0 relative"
                   >
-                    {i !== sub.listItems!.length - 1 && (
-                      <div className="absolute left-[39px] md:left-[55px] top-12 bottom-[-16px] w-0.5 bg-[#4A645A]/30"></div>
-                    )}
-
-                    <div className="flex-shrink-0 w-20 md:w-28 pt-1.5 flex flex-col items-end z-10">
-                      <span className="text-sm md:text-base font-bold font-serif text-[#1A362D] dark:text-[#D4AF37] text-right break-words">
+                    <div className="text-right pr-4 md:pr-6 pt-1.5 md:pt-2">
+                      <span className="text-sm md:text-base font-bold font-serif text-[#1A362D] dark:text-[#D4AF37] leading-tight break-words">
                         {item.marker}
                       </span>
                     </div>
 
-                    <div className="relative z-10 w-4 h-4 rounded-full border-4 border-white dark:border-stone-900 bg-[#D4AF37] dark:bg-[#D4AF37] mt-2.5 flex-shrink-0 shadow-sm ml-[-33px] md:ml-[-41px]"></div>
+                    <div className="relative flex justify-center">
+                      <div className="w-5 h-5 rounded-full border-4 border-white dark:border-stone-800 bg-[#D4AF37] mt-1.5 md:mt-2 z-10 shadow-sm shrink-0 relative"></div>
+                      {i !== sub.listItems!.length - 1 && (
+                        <div className="absolute top-6 bottom-[-32px] w-0.5 bg-[#4A645A]/30 z-0"></div>
+                      )}
+                    </div>
 
-                    <div className="flex-1 bg-stone-50 dark:bg-stone-800/80 p-5 md:p-6 rounded-2xl border border-stone-100 dark:border-stone-700/80 shadow-sm">
-                      <h4 className="text-lg md:text-xl font-bold font-serif text-[#1A362D] dark:text-stone-200 mb-2">
-                        {item.title}
-                      </h4>
-                      <p className="text-stone-600 dark:text-stone-400 text-sm md:text-base leading-relaxed">
-                        {item.description}
-                      </p>
+                    <div className="pb-8 pl-2 md:pl-4">
+                      <div className="bg-stone-50 dark:bg-stone-900/40 p-5 md:p-6 rounded-2xl border border-stone-200 dark:border-stone-700/50 shadow-sm">
+                        <h4 className="text-lg md:text-xl font-bold font-serif text-[#1A362D] dark:text-stone-200 mb-2">
+                          {item.title}
+                        </h4>
+                        <p className="text-stone-600 dark:text-stone-400 text-sm md:text-base leading-relaxed">
+                          {item.description}
+                        </p>
+                      </div>
                     </div>
                   </div>
                 ))}
